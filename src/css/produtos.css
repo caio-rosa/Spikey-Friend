@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html, body {
+    min-width: 300px;
+    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+    background-color: blanchedalmond(241, 215, 225);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 245, 231);
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(139, 134, 134);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+nav {
+    top: 0px;
+    padding: 10px;
+    display: block;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    background-color:  hsla(0, 71%, 97%, 0.25);
+    backdrop-filter: blur(10px);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    left: -300px;
+    transition: all 0.25s;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+input[type="checkbox"]:checked ~ nav {
+    width: 22%;
+    left: 0px;
+    background-size: cover;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 25px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+nav > ul > li > a:hover {
+    background-color: aliceblue;
+    color: darkslategrey;
+}
+
+nav > ul {
+    margin-top: 88px;
+}
+
+.logo {
+    width: 40px;
+    height: 43px;
+}
+
+.logoMenu {
+    width: 30px;
+    height: 31px;
+    z-index: 2;
+    position: absolute;
+    top: 27px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: 0px 1px 0px;
+}
+
+.img {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.anuncio {
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    gap: 10px;
+    background-color: rgba(2, 39, 41, 0.055);
+    border-radius: 10px;
+
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.icone-valor {
+    width: 7%;
+    margin-right: 10px;
+}
+
+
+
+@media only screen and (min-width: 370px) and (max-width: 480px){
+    a {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 36px;
+    }
+
+    .logoMenu {
+        width: 25px;
+        height: 27px;
+    }
+
+    .info {
+        font-size: 20px;
+        gap: 15px;
+    }
+
+    .anuncio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 250px) and (max-width: 369px){
+    a {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 25px;
+        height: 28px;
+    }
+
+    header {
+        gap: 13px;
+    }
+
+    .info {
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .anuncio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoMenu {
+        width: 21px;
+        height: 24px;
+    }
+
+    .logoMenu {
+        left: 15px;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px){
+    .img {
+        height: 100%;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 840px){
+
+    nav {
+        font-size: 14px;
+
+    }
+
+    input[type="checkbox"]:checked ~ nav {
+        width: 42%;
+        left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 369px){
+
+    input[type="checkbox"]:checked ~ nav {
+        width: 42%;
+        left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 370px) and (max-width: 480px){
+
+    input[type="checkbox"]:checked ~ nav {
+        width: 42%;
+        left: 0px;
+    }
+
+}
